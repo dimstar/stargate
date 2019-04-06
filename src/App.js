@@ -6,7 +6,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Stargate></Stargate>
+      <>
+        <Stargate></Stargate>
+        <main><h1 className="site-brand">kyle magee</h1></main>
+      </>
     );
   }
 }

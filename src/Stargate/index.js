@@ -16,7 +16,6 @@ const Stargate = () => {
       <div className="gate-wrapper">
         <StarMask></StarMask>
       </div>
-      <main><h1>kyle magee</h1></main>
     </>
   );
 }
