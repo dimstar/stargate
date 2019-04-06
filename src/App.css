@@ -4,10 +4,11 @@
   font-family:geomanist, helvetica, sans-serif;
   box-sizing: border-box;
 } 
+
 body{
   position: relative;
   /* background-image: url(https://github.com/dimstar/stargate/raw/master/screen-shot.png); */
-  background-image: url(/img/joel-filipe-191372-unsplash.jpg);
+  /* background-image: url(/img/joel-filipe-191372-unsplash.jpg); */
   background-size: cover;
   background-position: center 190px;
   background-repeat: no-repeat
