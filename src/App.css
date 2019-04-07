@@ -29,16 +29,6 @@ main {
   width: 100%;
 }
 
-main:after {
-  top: 0;
-  position: absolute;
-  content: ' ';
-  width: 20vw;
-  height: 4vw;
-  background: lightcoral;
-  z-index: -1;
-}
-
 h1.site-brand {
   text-align: center;
   font-size: 3em;

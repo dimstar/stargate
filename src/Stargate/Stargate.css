@@ -35,27 +35,37 @@
 .occular > div {
   width: 50%;
   height: 100%;
+  /* transition: all 6000ms; */
+  background-repeat: no-repeat;
 }
-.right {
-  background-color: lightcoral;
-  transform: none;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b8e1fc+0,a9d2f3+10,90bae4+25,90bcea+37,90bff0+50,6ba8e5+51,a2daf5+83,bdf3fd+100;Blue+Gloss+%231 */
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b8e1fc+0,a9d2f3+7,90bae4+20,90bcea+26,90bff0+32,6ba8e5+32,6ba8e5+32,a2daf5+83,bdf3fd+100 */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bdf3fd+0,a2daf5+17,6ba8e5+68,6ba8e5+68,90bff0+68,90bcea+74,90bae4+80,a9d2f3+93,b8e1fc+100 */
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bdf3fd+0,a2daf5+17,90bff0+62,90bff0+62,6ba8e5+68,6ba8e5+68,90bcea+74,90bae4+80,ffffff+88,ffffff+88,a9d2f3+100 */
-background: #bdf3fd; /* Old browsers */
-background: -moz-linear-gradient(top, #bdf3fd 0%, #a2daf5 17%, #90bff0 62%, #90bff0 62%, #6ba8e5 68%, #6ba8e5 68%, #90bcea 74%, #90bae4 80%, #ffffff 88%, #ffffff 88%, #a9d2f3 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #bdf3fd 0%,#a2daf5 17%,#90bff0 62%,#90bff0 62%,#6ba8e5 68%,#6ba8e5 68%,#90bcea 74%,#90bae4 80%,#ffffff 88%,#ffffff 88%,#a9d2f3 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #bdf3fd 0%,#a2daf5 17%,#90bff0 62%,#90bff0 62%,#6ba8e5 68%,#6ba8e5 68%,#90bcea 74%,#90bae4 80%,#ffffff 88%,#ffffff 88%,#a9d2f3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdf3fd', endColorstr='#a9d2f3',GradientType=0 ); /* IE6-9 */
+
+body {
+  background: linear-gradient(to bottom, #3b679e 36%,#207cca 75%,#2b88d9 76%,#3b679e 93%,#7db9e8 100%);
 }
+
 .left {
-  background-color: lightsteelblue;
-  transform: none;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9d2f3+0,ffffff+12,6ba8e5+32,90bff0+56,ffffff+62,a2daf5+83,bdf3fd+100 */
-background: #a9d2f3; /* Old browsers */
-background: -moz-linear-gradient(top, #a9d2f3 0%, #ffffff 12%, #6ba8e5 32%, #90bff0 56%, #ffffff 62%, #a2daf5 83%, #bdf3fd 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #a9d2f3 0%,#ffffff 12%,#6ba8e5 32%,#90bff0 56%,#ffffff 62%,#a2daf5 83%,#bdf3fd 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #a9d2f3 0%,#ffffff 12%,#6ba8e5 32%,#90bff0 56%,#ffffff 62%,#a2daf5 83%,#bdf3fd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9d2f3', endColorstr='#bdf3fd',GradientType=0 ); /* IE6-9 */
+  /* background-color: lightsteelblue; */
+  background-image: url(/img/joel-filipe-191372-unsplash.jpg);
+}
+
+.splat {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes flowLeft {
+  from {
+    background-position: -100% -100%;
+  }
+
+  to {
+    background-position: 200% 200%;
+  }
+}
+
+.left {
+  animation-duration: 3s;
+  animation-name: flowLeft;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
 }
