@@ -35,37 +35,46 @@
 .occular > div {
   width: 50%;
   height: 100%;
-  /* transition: all 6000ms; */
-  background-repeat: no-repeat;
+  /* background: none !important; */
+  background-repeat: repeat;
 }
 
 body {
   background: linear-gradient(to bottom, #3b679e 36%,#207cca 75%,#2b88d9 76%,#3b679e 93%,#7db9e8 100%);
 }
 
-.left {
-  /* background-color: lightsteelblue; */
-  background-image: url(/img/joel-filipe-191372-unsplash.jpg);
+.star-container {
+  overflow: hidden;
+  background-size: 100%;
+  transition: opacity 18000ms;
 }
 
-.splat {
-  width: 100%;
-  height: 100%;
-}
-
-@keyframes flowLeft {
-  from {
-    background-position: -100% -100%;
+@keyframes starFlowLeft {
+  /* from {
+    background-position: 150px center;
+    opacity: 0;
   }
 
   to {
-    background-position: 200% 200%;
-  }
+    background-position: -200px center;
+    opacity: 1;
+  } */
+  0% {background-position: 100px center; opacity: 0}
+  /* 15% {opacity: 0.45} */
+  /* 19% {opacity: 0.73} */
+  45% {opacity: 1}
+  65% {opacity: 0.68}
+  100% {background-position: -200px center; opacity: 0}
 }
 
-.left {
-  animation-duration: 3s;
-  animation-name: flowLeft;
+.star-container {
+  animation-duration: 18s;
+  animation-name: starFlowLeft;
   animation-iteration-count: infinite;
-  /* animation-direction: alternate; */
+  /* animation-fill-mode: forwards; */
+  animation-timing-function: none;
+}
+
+.right {
+  transform: translateY(20px) rotate(180deg);
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import StarMask from './StarMask';
-import Splat from './Splat';
+import Stars from './Stars.svg';
+import CoronalEjection from './coronal-ejection.svg';
 import './Stargate.css';
 
 class Stargate extends React.Component {
@@ -14,18 +15,18 @@ class Stargate extends React.Component {
   }
 
   reversable = (delay) => {
-    setInterval(() => {
+    setTimeout(() => {
       this.setState( (state)=> {
         return {
-          reversed_right: (state.reversed_right === false) ? 'reverse' : false,
-          reversed_left: (state.reversed_left === false) ? 'reverse' : false,
+          reversed_right: (state.reversed_right === false) ? 'star-container' : false,
+          reversed_left: (state.reversed_left === false) ? 'star-container' : false,
         }
       });
     }, delay);
   };
 
   componentDidMount() {
-    this.reversable(6000);
+    this.reversable(1000);
   }
 
   render() {
@@ -33,10 +34,15 @@ class Stargate extends React.Component {
       <>
           <div className="stargate">
             <div className="occular">
-              <div className={`left ${this.state.reversed_right}`}>
-                <Splat></Splat>
+              <div className={`left ${this.state.reversed_right}`} style={{
+                  backgroundImage: (!this.state.reversed_right) ? 'none' : `url(${Stars})`,
+                }}>
+                {/* <Stars/> */}
               </div>
-              <div className={`right ${this.state.reversed_right}`}></div>
+              <div className={`right ${this.state.reversed_right}`} style={{
+                  backgroundImage: (!this.state.reversed_right) ? 'none' : `url(${Stars})`,
+                }}>
+              </div>
             </div>
           </div>
         <div className='gate-wrapper'>
