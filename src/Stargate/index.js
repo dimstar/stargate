@@ -1,7 +1,7 @@
 import React from 'react';
 import StarMask from './StarMask';
 import Stars from './Stars.svg';
-import CoronalEjection from './coronal-ejection.svg';
+import Starguides from './Starguides.svg';
 import './Stargate.css';
 
 class Stargate extends React.Component {
@@ -32,12 +32,16 @@ class Stargate extends React.Component {
   render() {
     return (
       <>
+        <div className='gate-wrapper'>
+          <StarMask></StarMask>
           <div className="stargate">
             <div className="occular">
               <div className={`left ${this.state.reversed_right}`} style={{
                   backgroundImage: (!this.state.reversed_right) ? 'none' : `url(${Stars})`,
                 }}>
-                {/* <Stars/> */}
+                <div className={`overlay`} style={{
+                  backgroundImage: (!this.state.reversed_right) ? 'none' : `url(${Starguides})`,
+                }}></div>
               </div>
               <div className={`right ${this.state.reversed_right}`} style={{
                   backgroundImage: (!this.state.reversed_right) ? 'none' : `url(${Stars})`,
@@ -45,8 +49,6 @@ class Stargate extends React.Component {
               </div>
             </div>
           </div>
-        <div className='gate-wrapper'>
-          <StarMask></StarMask>
         </div>
       </>
     );

@@ -8,7 +8,8 @@ class App extends Component {
     return (
       <>
         <Stargate></Stargate>
-        <main><h1 className="site-brand">kyle magee</h1></main>
+        <main><h1 className="site-brand">kyle magee</h1>
+        </main>
       </>
     );
   }
