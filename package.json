@@ -10,7 +10,7 @@
       "build": "parcel build index.html"
     },
     "dependencies": {
-      "three": "0.97.0",
+      "three": "0.125.0",
       "time-elements": "1.2.0"
     },
     "devDependencies": {
