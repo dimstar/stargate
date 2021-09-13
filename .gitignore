@@ -1,0 +1,11 @@
+node_modules*
+
+.DS_Store
+
+# parcel
+.cache
+
+dist
+
+# just in case
+.env*
